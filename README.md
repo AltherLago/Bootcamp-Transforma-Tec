@@ -1,4 +1,4 @@
-<img src="logo-transforma-tec.jpg" width=100px align="right"/>
+<img src="logo-transforma-tec.jpg" width=150px align="right"/>
 
 # TransformaTec
 
