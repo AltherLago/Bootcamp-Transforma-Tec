@@ -20,7 +20,7 @@
 
 - Access your account in the [Login] link(https://github.com/login)
 - In your profile, access ```Repositories``` -> ```New```
-- Insert a name, in this case, ```project_challenge_01```
+- Insert a name, in this case, ```desafio_de_projeto-01```
 - Insert a description (optional but very useful)
 - Keep the repository as public
 - Click on ```Create repository```
