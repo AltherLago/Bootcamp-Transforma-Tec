@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="">     
+            <table>
+                <tr>          
+                    <th>Registration Form</th>
+                </tr>
+                <tr>
+                    <td><label for="fname"></label>First name</label></td>
+                    <td><input name="fname" id="fnamme" type="text" required="true" placeholder="Fist name"></td>
+                </tr>
+                <tr>
+                    <td><label for="lname">Last Name</label></td>
+                    <td><input name="lname" id="lname" type="text" required="true" placeholder="Last name"></td>
+                </tr>
+                <tr>
+                    <td><label for="endress">Endress</label></td>
+                    <td><textarea row="3" id="endress" name="endress" required="true"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="disciplines">Disciplines</label></td>
+                    <td>
+                        <input type="checkbox"> Programin <br>
+                        <input type="checkbox"> Logic <br>
+                        <input type="checkbox"> Algorithm <br>
+                        <input type="checkbox"> Database <br>
+                        <input type="checkbox"> Mobile <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender</label></td>
+                    <td>
+                        <input type="radio" name="s1" id="m" checked="true"><label>Male</label>
+                        <input type="radio" name="s1" id="f" ><label>Faminine</label>
+                        <input type="radio" name="s1" id="n" ><label>Do not inform</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="Age">Age</label></td>
+                    <td>
+                        <select name="age" id="age">
+                            <option value=""></option>
+                            <option value="c">Children</option>
+                            <option value="m">Major</option>
+                            <option value="e">Erdely</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="picture">Profile picture</label></td>
+                    <td><input type="file" name="picture" required="true"></td>               </tr>
+            </table>
+    </form>
+</body>
+</html>
