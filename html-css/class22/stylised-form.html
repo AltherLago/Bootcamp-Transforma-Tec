@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylised Form</title>
+    <style>
+        div{
+            width: 50%;
+            height: 600px;
+            background-color: bisque;
+            margin: 0 auto;
+            border: 1px solid cornflowerblue;
+            padding: 10px;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+
+        label{
+            color: rgb(154, 45, 147);
+            font-size: 18px;
+            text-align: center;
+            font-family: 
+            Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .data{
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: flex;
+            border: 1px solid #ccc;
+        }
+
+        .data:hover{
+            background-color: #f1f1f1;
+        }
+
+        #button{
+            background-color: cornflowerblue;
+            border: none; ;
+            color: white;
+            display: block;
+            padding: 15px 32px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        #button:hover{
+            background-color: darkorchid;
+        }
+            
+    </style>
+</head>
+<body>
+    <div>
+        <form action="">
+            <label for="fname">First name</label>
+            <input type="text" name="fname" 
+            id="fname" placeholder="first name" class="data">
+
+            <label for="lname">Last name</label>
+            <input type="text" name="lname" id="lname" placeholder="last name" class="data">
+
+            <label for="email">E-mail</label>
+            <input type="text" name="e-mail" id="e-mail" placeholder="e-mail" class="data">
+
+            <label for="data">Birthday</label>
+            <input type="date" name="data" id="data" placeholder="birthday" class="data">
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="password" class="data">
+
+            <label for="comfirm">Comfirm password</label>
+            <input type="comfirm" name="comfirm" id="comfirm" placeholder="comfirm password" class="data">
+            <input type="submit" value="Send" id="button">
+        </form>
+    </div>
+</body>
+</html>
