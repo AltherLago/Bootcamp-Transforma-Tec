@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        div{
+            background-color: bisque;
+        }
+        h1{
+            color:  cadetblue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        p{
+            color:  cadetblue;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        @media only screen and (min-width: 400px) {
+            div{
+                background-color: cadetblue;
+            }
+            h1, p{
+                color: bisque;
+            }
+        }
+        @media only screen and (min-width: 600px){
+            div{
+                background-color: chocolate;
+            }
+            h1, p{
+                color: cornflowerblue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Page 1</h1>
+        <p>
+            Mussum ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+    </div>
+</body>
+</html>
