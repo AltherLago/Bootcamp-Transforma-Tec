@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals - align items</title>
+
+    <style>
+
+        .container{
+
+            max-width: 350px;
+            border: 1px solid black;
+            display: flex;
+            flex: 1;
+        }
+
+        .item{
+
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            flex: 1;
+            
+        }
+
+        .center{
+            align-items: center;
+        }
+
+        .flex{
+            flex: 1;
+        }
+
+        .stretch{
+            align-items: stretch;
+        }
+
+        .start{
+            align-items: flex-start;
+        }
+
+        .end{
+            align-items: end;
+        }
+
+        .baseline{
+            align-items: baseline;
+        }
+
+        .column{
+            flex-direction: column;
+        }
+
+        .central{
+            height: 300px;
+            justify-content: center;
+        }
+
+        .central .item{
+            flex: 0;
+            padding: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Row</h1>
+    <p>Center</p>
+    <section class="container center">
+
+        <div class="item">
+            item 1
+        </div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro.</div>
+        <div class="item">Item 3</div>
+
+    </section>
+
+    <p>Strectch</p>
+
+    <section class="container stretch">
+
+        <div class="item">
+            item 1
+        </div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro.</div>
+        <div class="item">Item 3</div>
+
+    </section>
+
+    <p>Flex-start</p>
+
+    <section class="container start">
+
+        <div class="item">
+            item 1
+        </div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro.</div>
+        <div class="item">Item 3</div>
+
+    </section>
+
+    <p>Flex-end</p>
+
+    <section class="container end">
+
+        <div class="item">
+            item 1
+        </div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro.</div>
+        <div class="item">Item 3</div>
+
+    </section>
+
+    <p>Baseline</p>
+
+    <section class="container baseline">
+
+        <div class="item"><br>item 1</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro.</div>
+        <div class="item">Item 3 ;lkj;lkj;l;lkj;l</div>
+
+    </section>
+
+    <h1>Column</h1>
+    <p>Flex-start</p>
+
+    <section class="container start column">
+
+        <div class="item">
+            item 1
+        </div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro.</div>
+        <div class="item">Item 3</div>
+
+    </section>
+
+    <p>Flex-end</p>
+
+    <section class="container end column
+    ">
+
+        <div class="item">
+            item 1
+        </div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro.</div>
+        <div class="item">Item 3</div>
+
+    </section>
+
+    <p>Center</p>
+    <section class="container center column">
+
+        <div class="item">
+            item 1
+        </div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro.</div>
+        <div class="item">Item 3</div>
+
+    </section>
+
+    <p>Baseline</p>
+
+    <section class="container baseline column">
+
+        <div class="item"><br>item 1</div>
+        <div class="item">Mussum Ipsum, cacilds vidis litro.</div>
+        <div class="item">Item 3 ;lkj;lkj;l;lkj;l</div>
+
+    </section>
+
+    <p>Clign center</p>
+
+    <section class="container center central">
+        <div class="item">Mussum Ipsum, cacilds vidis litro abertis. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. </div>
+    </section>
+    
+</body>
+</html>
