@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página do BEM</title>
+    
+    <style>
+
+        .container {
+            border: 1px solid blueviolet;
+            padding: 10px;
+            background-color: cornflowerblue;
+            max-width: 200px;
+            margin: auto;
+        }
+        .container__form{
+            display: flex;
+            flex-direction: column;
+            background-color:burlywood;
+            padding: 10px;
+        }
+        /* fazer isso */
+        .container__input{
+            background-color:cadetblue;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 5px;
+        }
+        .container__submit{
+            background-color:darkolivegreen;
+            border-radius: 5px;
+            color: white;
+            padding: 5px;
+            margin: 5px;
+        }
+        .container__header{
+            font: 15px sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .container__header--color{
+            color:crimson
+        }
+        .container__submit--hover:hover{
+            background-color: darkorange;
+        }
+        .container__submit--active:active{
+            background-color: orangered;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- Block -->
+    <div class="container">
+
+        <h1 class="container__header container__header--color">
+            My form</h1>
+
+        <!-- Components -->
+        <form action="" class="container__form">
+
+            <!-- Components -->
+            <input type="text" placeholder="Name" 
+            class="container__input">
+            
+            <input type="password" placeholder="Password" 
+            class="container__input">
+            
+            <input type="submit" value="Enter" 
+            class="container__submit container__submit--hover 
+            container__submit--active">
+        </form>
+
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    
+    <style>
+
+        .container{
+            background-color: bisque;
+            padding: 10px;
+            display: flex;
+            flex-direction: column; 
+            max-width: 300px;
+            margin: auto;
+        }
+
+        .title{
+            background-color:azure;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .title__text{
+            font: 16px sans-serif;
+        }
+
+        .title__text--color{
+            color:cornflowerblue;
+        }
+
+        .content{
+            background-color: lightblue;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .content__form{
+            background-color: lightgreen;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content__label{
+            padding: 10px;
+            font: 12px sans-serif;
+        }
+
+        .content__submit{
+            background-color: coral;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .content__submit--hover:hover{
+            background-color: lightseagreen;
+        }
+
+        .block__element--modifier{
+            color: green;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="block">
+            <p class="block__element--modifier">
+                Test paragraph BEM
+            </p>
+        </div>
+        
+        <div class="title">
+            <h1 class="title__text title__text--color">Form</h1>
+        </div>
+        
+        <div class="content">
+
+            <form action="" class="content__form">
+
+                <label for="name" class="content__label">Name</label>
+                <input type="text">
+
+                <label for="e-mail" class="content__label">E-mail</label>
+                <input type="email">
+
+                <label for="password" class="content__label">Password</label>
+                <input type="password">
+
+                <label for="password-comfirm" class="content__label">Password Confirm</label>
+                <input type="password">
+
+                <input type="submit" value="Confirm" class="content__submit content__submit--hover">
+
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>
