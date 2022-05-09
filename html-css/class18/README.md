@@ -1,8 +1,6 @@
-# Exercises HTML
+# Introduction to HTML: Cross-Page Navigation
 
-## Theme: Navigation between pages with links
-
-### Exercises lists
+## Exercises lists
 
 - [Exercise 1](./pages/exercise1.html)
 - [Exercise 2](./pages/exercise2.html)
