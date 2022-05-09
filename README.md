@@ -9,4 +9,4 @@
 
 ## Display Flex Project
 
-<img title="Display Flex Project" alt="Display Flex Project" src="/Project challenges/project-flexbox">
+<img title="Display Flex Project" alt="Display Flex Project" src="/Project challenges/project-flexbox/img/display-flex-project.gif">
