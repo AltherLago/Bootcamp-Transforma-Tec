@@ -1,1 +1,1 @@
-# Lesson 26: Understanding the BEM Pattern (Block, Element, Modifier)
+# Class 26: Understanding the BEM Pattern (Block, Element, Modifier)
