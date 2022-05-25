@@ -15,6 +15,6 @@
 
 <img title="Facebook Login Screen" alt="Facebook Login Screen" src="/html-css/class27/img/Peek 2022-05-15 02-01.gif">
 
-/*
-Programador e desenvolvedor Full-Stack certificado pelo programa de capacitação TransformaTec ofertado pelo Digital Inovation One. Estudante de Análise e Desenvolvimento de Sistemas (UNINTER).
-*/
+
+
+[//]: # (Programador e desenvolvedor Full-Stack certificado pelo programa de capacitação TransformaTec ofertado pelo Digital Inovation One. Estudante de Análise e Desenvolvimento de Sistemas (UNINTER)
