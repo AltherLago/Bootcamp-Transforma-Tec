@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Onchange</title>
+</head>
+<body>
+    <h1>Select your artist</h1>
+    <select id="artists" onchange="artistSelect()">
+        <option value="Raimundos">Raimundos</option>
+        <option value="Tim Maia">Tim Maia</option>
+        <option value="Daniel Silva">Daniel Silva</option>
+    </select>
+    <p id="result">Artist no selected</p>
+    <script>
+        function artistSelect(){
+            let artist = document.getElementById('artists').value;
+            document.getElementById('result').innerHTML = "Your artist: " + artist;
+        }
+    </script>
+</body>
+</html>

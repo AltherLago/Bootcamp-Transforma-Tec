@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onsubmit</title>
+</head>
+<body>
+    <div class="container">
+        <form id="my_form" action="">
+            <input id="fName" type="text" placeholder="Inform your first name">
+            <input id="lName" type="text" placeholder="Inform your last name">
+            <input id="age" type="number" placeholder="Inform your age">
+            <input id="email" type="email" placeholder="Inform your email">
+            <input id="password" type="password" placeholder="Inform your password">
+            <input id="comfirm" type="password" placeholder="Comfirm your password">
+            <input id="submit_btn" type="submit" value="Register">
+        </form>
+    </div>    
+    <script>
+        
+        document.getElementById('my_form').addEventListener('submit', submitForm);
+
+        function submitForm(){
+            let first_name = document.getElementById('fName').value;
+            let last_name = document.getElementById('lName').value;
+            let age = document.getElementById('age').value;
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+            let confirm = document.getElementById('comfirm').value;
+
+            if(first_name=='' || last_name=='' || age=='' || email=='' || password=='' || comfirm==''){
+                alert('Please fill everything')
+            }else{
+                if(password != confirm){
+                    alert('Different Passwords')
+                }else{
+                    alert('First Name ' + first_name + 'Register successfully')
+                }
+            }
+        }
+    </script>
+</body>
+</html>

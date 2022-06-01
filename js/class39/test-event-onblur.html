@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Onblur</title>
+</head>
+<body>
+    <p>Tell me your name</p>
+
+    <!-- The onblur event occurs when an object loses focus. -->
+    <input type="text" id="name" onblur="changeColor()" onfocus="backColor()">
+
+    <script>
+
+        function changeColor(){
+
+            document.getElementById('name').style.background = 'cadetblue';
+            document.getElementById('name').style.borderRadius = '5px';           
+        }
+       
+        function backColor(){
+
+            document.getElementById('name').style.background = 'white';
+            document.getElementById('name').style.borderRadius = '5px';           
+        }
+    </script>
+</body>
+</html>
