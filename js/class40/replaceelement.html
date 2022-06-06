@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replece</title>
+</head>
+<body>
+    <ul id="my-list">
+        <li>Coffe</li>
+        <li>Bread</li>
+        <li>Cookie</li>
+        <button onclick="supplant()">Supplant</button>
+    </ul>
+    <script>
+        function supplant(){
+            const element = document.getElementById('my-list').children[0];
+
+            const newElement = document.createTextNode('Milk');
+
+            console.log(element);
+            console.log(element.childNodes);
+
+            element.replaceChild(newElement, element.childNodes[0]);
+        }
+    </script>
+</body>
+</html>

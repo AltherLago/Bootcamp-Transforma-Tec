@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Child</title>
+</head>
+<body>
+    <input type="text" id="item" placeholder="New item">
+    <button onclick="insertItem()">Insert</button>
+
+    <input type="number" id="index" placeholder="Ìndex index to remove">
+    <button onclick="itemRemove()">To remove</button>
+    
+    <ul id="my-list"></ul>
+
+    <script>
+        function insertItem(){
+            const item = document.getElementById('item').value;
+            let textNode = document.createTextNode(item);
+            
+            let newItem = document.createElement('li');
+            newItem.appendChild(textNode);
+
+            let list = document.getElementById('my-list');
+            list.insertBefore(newItem, list.children[0]);
+        }
+
+        function itemRemove(){
+            let index = document.getElementById('index').value;
+
+            const list = document.getElementById('my-list');
+
+            index = Number(index);
+
+            list.removeChild(list.children[index]);
+        }
+    </script>
+</body>
+</html>

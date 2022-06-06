@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinamic Element</title>
+</head>
+<body>
+    
+    <script>
+        let element = document.createElement("p");
+        element.innerHTML = "My paragraph on JS";
+        document.body.appendChild(element);
+
+        element.style.color = "coral";
+        element.style.fontSize = "25px";
+
+
+        let new_element = document.createElement("div");
+        new_element.innerHTML = "adsf";
+        document.body.appendChild(new_element);
+
+        new_element.style.backgroundColor = 'cadetblue';        
+        new_element.style.padding = "5px";
+        new_element.style.borderRadius = "5px";
+
+    </script>
+</body>
+</html>

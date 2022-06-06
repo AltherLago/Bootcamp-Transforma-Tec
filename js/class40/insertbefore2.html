@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Before</title>
+</head>
+<body>
+    <input id="item" type="text" placeholder="New item">
+    <button id="insert" onclick="itemInsert()">Insert</button>
+
+    <ul id="my-list">
+        <li>Coffe</li>
+        <li>Milk</li>
+        <li>Butter</li>
+        <li>French bread</li>
+    </ul>   
+    <script>
+        function itemInsert(){
+            let getText = document.getElementById('item').value; 
+
+            let list = document.getElementById('my-list');
+
+            let newLi = document.createElement('li');
+            let textNode = document.createTextNode(getText); 
+            newLi.appendChild(textNode);
+            
+            list.insertBefore(newLi, list.children[0]);
+
+        } 
+     </script>
+</body>
+</html>
