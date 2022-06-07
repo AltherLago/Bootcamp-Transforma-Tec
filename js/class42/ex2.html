@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements</title>
+</head>
+<body>
+    <div id="container">
+        <input type="text" id="text">
+        <input type="submit" id="bnt" name="btn" onclick="setName()">
+        <input id="btn" type="submit" name="btn" onclick="remove()">
+    </div>
+    <script>
+        function setName(){
+           let text = document.getElementById("text").value;
+           let para = document.createElement("p");
+
+           para.innerHTML = text;
+           para.style.color = "cadetblue";
+           para.style.fontFamily = "Arial";
+            
+           para.setAttribute("id","para");
+
+           document.getElementById("container").appendChild(para);
+        }
+
+       function remove(){
+           let para = document.getElementById("para");
+           
+           para.parentNode.removeChild(para);
+       }
+    </script>
+</body>
+</html>
