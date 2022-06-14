@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asy</title>
+</head>
+<body>
+    <div id="main">
+        <p>Calculate</p>
+        <input type="submit" value="Calculate" onclick="calculate()">
+    </div>    
+    <script>
+       
+        function calculate(){
+            
+            let n1 = 20;
+            let n2 = 40;
+
+            let sum = n1 + n2;
+            show(sum);
+
+        }
+
+        function show(sum){
+            
+            var result = document.createElement("p");
+            result.innerHTML = "Resultado: " + sum;
+            document.getElementById("main").appendChild(result);
+        
+        }
+    </script>
+</body>
+</html>
