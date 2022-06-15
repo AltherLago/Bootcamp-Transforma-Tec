@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sing up Form</title>
+</head>
+<body>
+    <div id="form">
+
+        <input id="fname" type="text" placeholder="First Name">
+        <input id="lname" type="text" placeholder="Last Name">
+        <input id="adress" type="text" placeholder="Adress">
+        <input id="cep" type="number" placeholder="CEP">
+        <input id="email" type="email" placeholder="Email">
+        <input id="password" type="password" placeholder="Password">
+        <input id="comfirm" type="password" placeholder="Password Comfirm">
+        <input id="submit_btn" type="submit" value="Submit" onclick="singUp()">
+
+        <p id="result"></p>
+
+    </div>
+
+    <script>
+
+        function singUp(){
+ 
+            let promise = new Promise(
+
+                function(sucess, error){
+
+                    let fname = document.getElementById('fname').value;
+                    let lname = document.getElementById('lname').value;
+                    let adress = document.getElementById('adress').value;
+                    let cep = document.getElementById('cep').value;
+                    let email = document.getElementById('email').value;
+                    let password = document.getElementById('password').value;
+                    let comfirm = document.getElementById('comfirm').value;
+
+                    if(!fname || !lname || !adress || !cep || !email || !password || !comfirm){
+                        error('Fill in all fields');
+                    }else if(password != comfirm){
+                        error('Different  password');
+                    }else{
+
+                        let user = {
+                            "fname": fname,
+                            "lname": lname,
+                            "adress": adress,
+                            "email":  email
+                        }
+
+                        sucess(JSON.stringify(user));
+                    }
+                    
+                }
+            ).then(
+                function(message){
+                    display(message);
+                }
+            ).catch(
+                function(err){
+                    display(err);
+                }
+            )   
+        }
+
+
+        function display(message){
+
+            document.getElementById('result').innerHTML = message;
+
+        }    
+
+    </script>
+</body>
+</html>
