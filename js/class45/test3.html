@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election</title>
+</head>
+<body>
+   <div id="main">
+        <input type="submit" id="borso" value="Borso" onclick="voteBorso()">
+        <input type="submit" id="molusco" value="Molusco" onclick="voteMolusco()">
+        <input type="submit" id="margarina" value="Margarina" onclick="voteMargarina()">
+
+        <p id="votes"></p>
+   </div>
+   <script>
+
+        let borso_votes = 0;
+        let molusco_votes = 0;
+        let margarina_votes = 0;
+
+        const borso_btn = document.getElementById('borso');
+        const molusco_btn = document.getElementById('molusco');
+        const margarina_btn = document.getElementById('margarina');
+
+        console.log(borso_btn.value);
+
+        async function voteBorso(){
+            let candidate = borso_btn.value;
+            await incrementVote(candidate);
+        }
+
+        async function voteMolusco(){
+            let candidate = molusco_btn.value; 
+            await incrementVote(candidate);
+        } 
+
+        async function voteMargarina(){
+            let candidate = margarina_btn.value; 
+            await incrementVote(candidate);
+        } 
+
+        async function incrementVote(candidate){
+            if(candidate == "Borso"){
+                borso_votes++;
+            }else if(candidate == "Molusco"){
+                molusco_votes++;
+            }else{
+                margarina_votes++;
+            }
+            await displayVotes()
+        }
+
+        async  function displayVotes(){
+            document.getElementById('votes').innerHTML = 
+            ' |  Borso: ' + borso_votes + 
+            ' |  Molusco: ' + molusco_votes +
+            ' |  Margarina: ' + margarina_votes;
+        }
+   </script>
+</body>
+</html>
