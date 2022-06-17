@@ -4,8 +4,12 @@ try{
     if(x < 30){
         console.log("Valid number");
     }else{
-        throw "Erro! Invalid number Number"
+        throw {
+            "name":"Erro!InvalidNumber ",
+            "message":"Erro! Invalid number"
+        } 
     }
 }catch(error){
-    console.log(error);
+    console.log(error.name);
+    console.log(error.message);
 }
