@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Errors</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="name" placeholder="name">
+        <input type="number" id="old" placeholder="old">
+        <input type="number" id="cpf" placeholder="cpf">
+        <input type="text" id="job" placeholder="job">
+        
+        <input type="submit" value="SingUp" onclick="singUp()">
+
+        <p id="result"></p>
+    </div>
+</body>
+<script>
+    
+    class ErroForm extends Error{
+        constructor(message){
+            super(message)
+
+            this.name = "ErroForm";
+        }
+    }
+
+    class ErroCPF extends Error{
+         constructor(message){
+            super(message)
+
+            this.name = "ErroCPF";
+        }
+       
+    }
+
+    function singUp(){
+        try{
+            let name = document.getElementById("name").value; 
+            let old = document.getElementById("old").value; 
+            let cpf = document.getElementById("cpf").value; 
+            let job = document.getElementById("job").value; 
+
+            if(name == null || !old || !job || !cpf){
+                let erroForm = new ErroForm("blank fields not allowed");
+
+                throw erroForm;
+            }else{
+                if(cpf.length != 11){
+                    let erroCPF = new ErroCPF("CPF lenght differs 11 numbers");
+                    throw erroCPF;
+                }
+                document.getElementById("result").innerHTML = "Sing up User";
+            }
+        }catch(erro){
+            document.getElementById("result").innerHTML = erro.message;
+        }
+    }    
+</script>
+</html>
