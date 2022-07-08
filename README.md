@@ -19,4 +19,4 @@
 
 <img title="Dark Mode" alt="Dark Mode" src="/js/introduction/DOM/dark-mode.gif">
 
-[//]: # (Programador e desenvolvedor Full-Stack certificado pelo programa de capacitação TransformaTec ofertado pelo Digital Inovation One. Estudante de Análise e Desenvolvimento de Sistemas (UNINTER)
+[//]: # (Programador e desenvolvedor Full-Stack certificado pelo programa de capacitação TransformaTec ofertado pelo Digital Inovation One. Estudante de Análise e Desenvolvimento de Sistemas UNINTER )
