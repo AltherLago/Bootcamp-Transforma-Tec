@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Query JSONPlaceholder</title>
+</head>
+<body>
+    <div>
+        <p id="todo"></p>
+        <p id="todo-userId"></p>
+        <p id="todo-id"></p>
+        <p id="todo-title"></p>
+        <p id="todo-completed"></p>
+    </div>
+    <script>
+        const todo_url = `https://jsonplaceholder.typicode.com/todos/1` 
+        fetch(todo_url)
+            .then(response => response.json())
+            //.then(json => console.log(json))
+            .then((json) => {
+                document.getElementById("todo").innerHTML = "TODO: " + JSON.stringify(json)
+                document.getElementById("todo-userId").innerHTML = "userId: " + json.userId 
+                document.getElementById("todo-id").innerHTML = "id: " + json.id
+                document.getElementById("todo-title").innerHTML = "title: " + json.title
+                document.getElementById("todo-completed").innerHTML = "completed: " + json.completed
+           })
+            .catch(err => console.log(err))
+    </script>
+</body>
+</html>

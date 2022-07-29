@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Query User</title>
+</head>
+<body>
+   <div id="container">
+
+       <input id="user_id" type="text" placeholder="User id">
+       <input type="button" value="Search" onclick="userQuery()">
+
+       <p id="user"></p>
+       <p id="name"></p>
+       <p id="username"></p>
+       <p id="email"></p>
+       <p id="companyname"></p>
+
+   </div>
+
+   <script>
+       function userQuery(){
+
+           const user_id = document.getElementById("user_id").value
+           const server_url = `https://jsonplaceholder.typicode.com/users/${user_id}`
+           fetch(server_url)
+               .then(response => response.json())
+               .then(user_json => {
+                   document.getElementById("user").innerHTML = JSON.stringify(user_json)
+                   document.getElementById("name").innerHTML = user_json.name
+                   document.getElementById("username").innerHTML = user_json.username
+                   document.getElementById("email").innerHTML = user_json.email
+                   document.getElementById("companyname").innerHTML = user_json.company["name"]
+               })
+       }
+   </script>
+</body>
+</html>
