@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search CEP - ViaCEP</title>
+</head>
+<body>
+   <input type="text" id="cep" placeholder="CEP" onblur="searchCEP()">
+</body>
+<script>
+    function searchCEP(){
+        
+        let cep = document.getElementById("cep").value
+
+        console.log("CEP: ", cep)
+
+        let url = `https://viacep.com.br/ws/${cep}/json/`
+
+        fetch(url)
+            .then(result => result.json())
+            .then(json => console.log(json))
+    }
+</script>
+</html>

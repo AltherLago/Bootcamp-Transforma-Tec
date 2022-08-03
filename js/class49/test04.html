@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search CEP</title>
+</head>
+<body>
+   <input type="text" id="cep" placeholder="CEP">
+   <input type="submit" onclick="CEPSearch()">
+
+   <p id="result"></p>
+</body>
+<script>
+
+    function CEPSearch(){
+
+        let cep = document.getElementById("cep").value
+        console.log(cep)
+
+        let url = `https://viacep.com.br/ws/${cep}/json`
+        console.log(url)
+
+        let adress = document.getElementById("result")
+
+        fetch(url)
+            .then(response => response.json())
+            .then(json => {
+                adress.innerHTML = JSON.stringify(json)
+            })
+
+       
+
+    }
+</script>
+</html>
