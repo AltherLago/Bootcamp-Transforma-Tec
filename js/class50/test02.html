@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search CEP - async/await</title>
+</head>
+<body>
+   <p id="adress"></p>
+   <p id="street"></p>
+   <p id="city"></p>
+   <p id="district"></p>
+</body>
+<script>
+
+    const displayData = async () => {
+
+        const data = await searchCep()
+        document.getElementById("adress").innerHTML = JSON.stringify(data)
+
+    }
+
+    const searchCep = async () => {
+
+        const viacep_url = "https://viacep.com.br/ws/01001000/json/"
+
+        try{
+            const result = await fetch(viacep_url)
+
+            const json_result = await result.json() 
+
+            console.log(json_result)
+
+            return json_result
+        } catch  (erro) {
+            console.log(erro)
+            return erro
+        }
+    }
+
+    const displayHtml = async () => {
+
+        const data = await searchCep()
+        let street = JSON.stringify(data.logradouro) 
+        let city = JSON.stringify(data.localidade) 
+        let district = JSON.stringify(data.bairro) 
+
+        document.getElementById("street").innerHTML = street 
+        document.getElementById("city").innerHTML = city 
+        document.getElementById("district").innerHTML = district 
+
+    }
+    
+
+    displayData()
+    displayHtml()
+
+</script>
+</html>
