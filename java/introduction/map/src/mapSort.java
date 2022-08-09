@@ -11,6 +11,7 @@ public class mapSort{
             put(" Hawking, Stephen", new Book("Uma Breve História do Tempo", 256));
             put(" Duhigg, Charles", new Book("O Poder do Hábito", 408));
             put(" Harari, Yuval Noah", new Book("21 Lições Para o Século 21", 432));
+
         }};
         for (Map.Entry<String, Book> book : myBooks.entrySet())
             System.out.println(book.getKey() + " - " + book.getValue().getName());
