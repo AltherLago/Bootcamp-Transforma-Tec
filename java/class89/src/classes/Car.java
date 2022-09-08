@@ -22,6 +22,9 @@ public class Car{
 
                }
 
+    public String getLicensePlate(){
+            return licensePlate;
+    }
     public void setLicensePlate(String licensePlate){
         this.licensePlate = licensePlate;
     }
@@ -54,7 +57,7 @@ public class Car{
         return height;
     }
 
-    public void setHeight(){
+    public void setHeight(Integer height){
         this.height = height;
     }
 
