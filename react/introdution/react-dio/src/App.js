@@ -1,5 +1,6 @@
 import React from 'react';
 import Item from './components/Item';
+import Card from './components/Card';
 
 const App = () => {
   return(
@@ -15,9 +16,8 @@ const App = () => {
          <Item>
           Item 3
         </Item>
-  
-
       </ul>
+      <Card/>
     </>
   )
 }
