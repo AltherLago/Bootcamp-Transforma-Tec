@@ -29,7 +29,7 @@ const Card = () =>{
                     onClick={Remove}>
                         Remove
                 </Button>
-                <p>{value}</p>
+                <p>{value}</p> 
 
             </div>
         </div>
