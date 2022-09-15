@@ -1,18 +1,29 @@
 import './App.css';
 
-//import Hello  from './components/Hello';
-//import HelloDio from './components/HelloDio';
+/*
+import Hello  from './components/Hello';
+import HelloDio from './components/HelloDio';
+*/
 
-// import HelloWorldDIO from './components/class54/HelloWorldDIO.jsx'
-// import HelloWorldDIOClass from './components/class54/HelloWorldDIOClass.jsx';
-// import HelloWorldDioDev from './components/class54/HelloWorldDIODev.jsx'
-// import HelloWorldCalculator from './components/class54/HelloWorldCalculator.jsx';
-// import HelloWorldFunction from './components/class54/HelloWorldFunction.jsx'
+/*
+import HelloWorldDIO from './components/class54/HelloWorldDIO.jsx'
+import HelloWorldDIOClass from './components/class54/HelloWorldDIOClass.jsx';
+import HelloWorldDioDev from './components/class54/HelloWorldDIODev.jsx'
+import HelloWorldCalculator from './components/class54/HelloWorldCalculator.jsx';
+import HelloWorldFunction from './components/class54/HelloWorldFunction.jsx'
+*/
 
+/*
 import HelloWorld from '../src/components/class55/HelloWorld'
 import Car from './components/class55/Car.jsx'
 import PersonRegister from './components/class55/PersonRegister.jsx'
 import GameScore from './components/class55/GameScore.jsx'
+*/
+
+import StateColor from './components/class56/StateColor';
+import StateCar from './components/class56/StateCar'
+import StatePerson from './components/class56/StatePerson'
+import StateClock from './components/class56/StateClock'
 
 function App() {
   return (
@@ -33,13 +44,28 @@ function App() {
       <HelloWorldCalculator n1={3} n2={5}/>
       <HelloWorldFunction/>
     */}
-    
+
+    {/* Class 55
+
       <HelloWorld name="Alther"/>
       <Car owner="Alther pé de pano"/> 
     
       <PersonRegister name="Alther" age={32} lastName="Lago" job="Dev"/>
+      <GameScore points={0}/>
+    */}
+ 
+    {/*Class56 */}
 
-    <GameScore points={0}/>
+        <StateColor color="blue"/>
+        <StateCar/>
+        <StatePerson name="Joao" job="Painter" age={33}/>
+        <StateClock/>
+    
+    
+
+    {/*Class57 */}
+
+
     </div>
   );
 }
