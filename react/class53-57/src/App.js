@@ -20,10 +20,20 @@ import PersonRegister from './components/class55/PersonRegister.jsx'
 import GameScore from './components/class55/GameScore.jsx'
 */
 
+/*
 import StateColor from './components/class56/StateColor';
 import StateCar from './components/class56/StateCar'
 import StatePerson from './components/class56/StatePerson'
+import StateClass from './components/class57/StateClass';
+import StateProps from './components/class57/StateProps';
 import StateClock from './components/class56/StateClock'
+*/
+
+import StateFunction from './components/class57/StateFunction';
+import StateClass from './components/class57/StateClass.jsx';
+import StateProps from './components/class57/StateProps.jsx';
+import FormExample from './components/class57/FormExample';
+import FormMultiple from './components/class57/FormMultiple';
 
 function App() {
   return (
@@ -54,17 +64,20 @@ function App() {
       <GameScore points={0}/>
     */}
  
-    {/*Class56 */}
-
+    {/*Class56 
         <StateColor color="blue"/>
         <StateCar/>
         <StatePerson name="Joao" job="Painter" age={33}/>
         <StateClock/>
-    
-    
+    */}
 
     {/*Class57 */}
 
+        <StateFunction/> 
+        <StateClass/>
+        <StateProps color="blue"/>
+        <FormExample/>
+        <FormMultiple/>
 
     </div>
   );
