@@ -2,10 +2,7 @@ import React, {useState} from 'react'
 
 const AddUserForm = (props) => {
     
-    const initForm = {id: null,
-                      name: null,
-                      username: null,
-                      email: null}
+    const initForm = {id: null, name: null, username: null, email: null}
 
     const [user, setUser] = useState(initForm)
 
@@ -21,13 +18,12 @@ const AddUserForm = (props) => {
                     // don't update page
                     event.preventDefault()
 
-                    if(!user.name
-                       || !user.user
-                       || !user.email){
-                        return
-                    }
+ 
+                if (!user.name || !user.email || !user.username) {
+                    return
+                }
 
-                    // insite component USER
+                    // inside component USER
                     props.addUser(user)
                     // empty form
                     setUser(initForm)

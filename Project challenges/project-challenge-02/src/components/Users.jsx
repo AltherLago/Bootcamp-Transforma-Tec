@@ -1,4 +1,7 @@
-import React, {useState} from "react"
+import React, {useState} from 'react'
+import AddUserForm from './AddUserForm'
+import EditUserForm from './EditUserForm'
+import UsersTable from './UsersTable'
 
 const Users = () => {
 
@@ -17,22 +20,10 @@ const Users = () => {
     const [editing, setEditing] = useState(false)
     
     const addUser = (user) => {
-        user.id = user.length + 1
+        user.id = users.length + 1
         // add on user list
         setUsers([...users, user])
     }
-
-    // const deleteUser = (id) => {
-        // setEditing(false)
-
-        // setUsers(
-            // users.filter(
-                // (user) => {
-                    // user.id !== id
-                // }
-            // )
-        // )
-    // }  
 
     const deleteUser = (id) => {
         setEditing(false)
@@ -41,11 +32,11 @@ const Users = () => {
         setUsers(users.filter(user => user.id !== id))
     }  
 
-    const updateUser = (id, updateUser) => {
+    const updateUser = (id, updatedUser) => {
         setEditing(false)
 
         setUsers(users.map(
-            user => (user.id === id ? updateUser : user)
+            user => (user.id === id ? updatedUser : user)
         ))
     }
 
@@ -60,7 +51,40 @@ const Users = () => {
     return(
         <>
             <h2>Sing up</h2>
+            <div>
+                <div>
+                    {
+                        editing?(
+                            <div>
+                                <h3>To edit user</h3>
+                                <EditUserForm
+                                    editing={editing}
+                                    setEditing={setEditing}
+                                    currentUser={currentUser}
+                                    updateUser={updateUser}
+                                />
+                            </div>
+                        ):(
+                            <div>
+                                <h3>New user</h3>    
+                                <AddUserForm addUser={addUser}/>
+                            </div>
+                        
+                        )
+                    }
+                </div>
+                <div>
+                    <h3>Users list</h3>
+                    <UsersTable
+                        users={users}
+                        editRow={editRow}
+                        deleteUser={deleteUser}
+                    />
+                </div>
+            </div>
         </>
     )
 
 }
+
+export default Users
