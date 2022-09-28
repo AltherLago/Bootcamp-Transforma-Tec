@@ -1,4 +1,25 @@
 import React from "react"
+import styled from 'styled-components'
+import styles from './styles.scss'
+
+// main button
+const  Button = styled.button`
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+` 
+
+// inheritance main button
+const EditButton = styled(Button)`
+    background-color: lightyellow;
+`
+
+// inheritance main button
+const RemoveButton = styled(Button)`
+    background-color: lightcoral;
+`
+
+
 
 // why is use "("?
 const UsersTable = (props) => (
@@ -25,21 +46,21 @@ const UsersTable = (props) => (
                                 <td>{user.username}</td>
                                 <td>{user.email}</td>
 
-                            <button onClick={
+                            <EditButton onClick={
                                 () => {
                                     props.editRow(user)
                                 }
                             }>
                                 Edit
-                            </button>
+                            </EditButton>
 
-                            <button onClick={
+                            <RemoveButton onClick={
                                 () => {
                                     props.deleteUser(user.id)
                                 }
                             }>
                                 Delete
-                            </button>
+                            </RemoveButton>
                             
                             </tr>
                         ))
