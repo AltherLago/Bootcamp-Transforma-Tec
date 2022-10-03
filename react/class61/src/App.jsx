@@ -6,13 +6,14 @@ function App() {
     <div>
         <h2>Invoice list</h2>
         <nav
-            style={{
-                borderBottom: 'solid 1px',
-                paddingBottom: '1rem'
-            }}
-        >
+          style={{
+            borderBottom: "solid 1px",
+            paddingBottom: "1rem",
+          }}>
+          
             <Link to='/invoices'>Invoice</Link>
             <Link to='/expenses'>Expenses</Link>
+
         </nav>
         <Outlet/> 
     </div>
