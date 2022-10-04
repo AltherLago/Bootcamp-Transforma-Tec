@@ -10,6 +10,10 @@ npx create-react-app <project-name>
 
 npm i -g create-react-app
 
+#styled components
+
+npm i styled-components 
+
 # install React Router
 
 npm install react-router-dom
