@@ -1,5 +1,6 @@
 import './App.css';
 import ChangeColor from './components/ChangeColor';
+import FormState from './components/FormState';
 import LazyFunction from './components/LazyFunction';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
         <ChangeColor/>
         <LazyFunction/>
+        <FormState/>
     </div>
   );
 }
