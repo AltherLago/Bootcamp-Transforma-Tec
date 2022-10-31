@@ -19,4 +19,12 @@
 
 <img title="Dark Mode" alt="Dark Mode" src="/js/introduction/DOM/dark-mode.gif">
 
+## Traffic light react
+
+<img title="Dark Mode" alt="Dark Mode" src="/react/class66/public/traffic-light.gif">
+
+## Todo list react
+
+<img title="Dark Mode" alt="Dark Mode" src="/react/class66/public/todo-list.gif">
+
 [//]: # (Programador e desenvolvedor Full-Stack certificado pelo programa de capacitação TransformaTec ofertado pelo Digital Inovation One. Estudante de Análise e Desenvolvimento de Sistemas UNINTER )
