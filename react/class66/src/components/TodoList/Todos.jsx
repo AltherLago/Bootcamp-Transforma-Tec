@@ -11,7 +11,7 @@ export default function Todos(){
             isCompleted: false
         },
         {
-            text: "Finish portfolio",
+            text: "Start portfolio",
             isCompleted: false
         }
     ])
